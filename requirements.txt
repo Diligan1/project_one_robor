@@ -1,0 +1,3 @@
+# Данный файл предназначен для установки зависимостей на весь проект
+robotframework==7.0
+robotframework-seleniumlibrary==6.3.0
