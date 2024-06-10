@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-10T15:08:25.537863" rpa="false" schemaversion="5">
+<suite id="s1" name="Project One" source="C:\Users\i.ilyin\Desktop\project_one">
+<suite id="s1-s1" name="Tests" source="C:\Users\i.ilyin\Desktop\project_one\tests">
+<suite id="s1-s1-s1" name="Etp Tests" source="C:\Users\i.ilyin\Desktop\project_one\tests\etp_tests">
+<suite id="s1-s1-s1-s1" name="Open Website Etp" source="C:\Users\i.ilyin\Desktop\project_one\tests\etp_tests\open_website_etp.robot">
+<test id="s1-s1-s1-s1-t1" name="Transition_open_page_etpgpb" line="9">
+<kw name="Preconditon: Open Browser and Maximaze" owner="web" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-10T15:08:25.978797" level="INFO">Opening browser 'chrome' to base url 'https://etp.gpb.ru/#auth/login'.</msg>
+<arg>url=${site_url}</arg>
+<arg>browser=${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-10T15:08:25.978797" elapsed="4.761228"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-10T15:08:30.740025" elapsed="0.037280"/>
+</kw>
+<arg>site_url=https://etp.gpb.ru/#auth/login</arg>
+<arg>browser=chrome</arg>
+<doc>Предусловие: Открытие браузера на весь экран</doc>
+<status status="PASS" start="2024-06-10T15:08:25.976757" elapsed="4.802579"/>
+</kw>
+<kw name="Transition registr etp" owner="etpgb">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>locator=${T0_REGISTR_ETP}</arg>
+<arg>timeout=35s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-10T15:08:30.786781" elapsed="0.746931"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-10T15:08:31.535710" level="INFO">Clicking element '//a[@class="blue-note x-align-center registration_btn"]'.</msg>
+<arg>locator=${T0_REGISTR_ETP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-10T15:08:31.534708" elapsed="0.220306"/>
+</kw>
+<doc>1 шаг:  Открытие страницы регистрации</doc>
+<status status="PASS" start="2024-06-10T15:08:30.781521" elapsed="0.974063"/>
+</kw>
+<kw name="To registr page" owner="etpgb">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>locator=${TO_TAP_BTH}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-10T15:08:31.758706" elapsed="0.023825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-10T15:08:31.784054" level="INFO">Clicking element '(//td[@class="x-btn-mc"])[2]'.</msg>
+<arg>locator=${TO_TAP_BTH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-10T15:08:31.783031" elapsed="0.443917"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${REGISTR_PAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-10T15:08:32.226948" elapsed="0.228211"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-10T15:08:42.457737" level="INFO">Slept 10 seconds.</msg>
+<arg>time_=10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-10T15:08:32.455646" elapsed="10.002591"/>
+</kw>
+<doc>2 шаг: Переход на страницу регистрации и ожидание</doc>
+<status status="PASS" start="2024-06-10T15:08:31.757605" elapsed="10.700632"/>
+</kw>
+<kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-10T15:08:42.460236" elapsed="2.282710"/>
+</kw>
+<doc>Постусловие: Закрывает браузер, после выполнения теста</doc>
+<status status="PASS" start="2024-06-10T15:08:42.459248" elapsed="2.284198"/>
+</kw>
+<doc>Открытие страницы регистрации</doc>
+<status status="PASS" start="2024-06-10T15:08:25.974141" elapsed="18.769818"/>
+</test>
+<doc>в данном разделе будут хранится основные тест-кейсы проекта</doc>
+<status status="PASS" start="2024-06-10T15:08:25.598476" elapsed="19.148039"/>
+</suite>
+<status status="PASS" start="2024-06-10T15:08:25.590720" elapsed="19.158343"/>
+</suite>
+<status status="PASS" start="2024-06-10T15:08:25.584863" elapsed="19.165653"/>
+</suite>
+<status status="PASS" start="2024-06-10T15:08:25.545924" elapsed="19.206090"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Project One">Project One</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Project One.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Etp Tests">Project One.Tests.Etp Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Open Website Etp">Project One.Tests.Etp Tests.Open Website Etp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
