@@ -1,68 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-10T15:33:16.966859" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-10T15:34:10.209902" rpa="false" schemaversion="5">
 <suite id="s1" name="Open Website Etp" source="C:\Users\i.ilyin\Desktop\project_one\tests\etp_tests\open_website_etp.robot">
 <test id="s1-t1" name="Transition_open_page_etpgpb" line="9">
 <kw name="Preconditon: Open Browser and Maximaze" owner="web" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-10T15:33:17.279827" level="INFO">Opening browser 'chrome' to base url 'https://etp.gpb.ru/#auth/login'.</msg>
+<msg time="2024-06-10T15:34:10.412057" level="INFO">Opening browser 'chrome' to base url 'https://etp.gpb.ru/#auth/login'.</msg>
 <arg>url=${site_url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-10T15:33:17.278828" elapsed="4.684565"/>
+<status status="PASS" start="2024-06-10T15:34:10.411396" elapsed="6.430728"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-10T15:33:21.963393" elapsed="0.043272"/>
+<status status="PASS" start="2024-06-10T15:34:16.843339" elapsed="0.034460"/>
 </kw>
 <arg>site_url=https://etp.gpb.ru/#auth/login</arg>
 <arg>browser=chrome</arg>
 <doc>Предусловие: Открытие браузера на весь экран</doc>
-<status status="PASS" start="2024-06-10T15:33:17.277819" elapsed="4.729663"/>
+<status status="PASS" start="2024-06-10T15:34:10.410067" elapsed="6.468548"/>
 </kw>
 <kw name="Transition registr etp" owner="etpgb">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<msg time="2024-06-10T15:33:22.990034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-10T15:33:22.990034" level="FAIL">Test timeout 5 seconds exceeded.</msg>
 <arg>locator=${T0_REGISTR_ETP}</arg>
 <arg>timeout=35s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="FAIL" start="2024-06-10T15:33:22.009522" elapsed="0.980512">Test timeout 5 seconds exceeded.</status>
+<status status="PASS" start="2024-06-10T15:34:16.878615" elapsed="1.018231"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-10T15:34:17.897842" level="INFO">Clicking element '//a[@class="blue-note x-align-center registration_btn"]'.</msg>
 <arg>locator=${T0_REGISTR_ETP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-06-10T15:33:22.990034" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-10T15:34:17.896846" elapsed="0.245862"/>
 </kw>
 <doc>1 шаг:  Открытие страницы регистрации</doc>
-<status status="FAIL" start="2024-06-10T15:33:22.008580" elapsed="0.982542">Test timeout 5 seconds exceeded.</status>
+<status status="PASS" start="2024-06-10T15:34:16.878615" elapsed="1.264093"/>
 </kw>
 <kw name="To registr page" owner="etpgb">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>locator=${TO_TAP_BTH}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-10T15:34:18.142708" elapsed="0.017829"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-10T15:34:18.161536" level="INFO">Clicking element '(//td[@class="x-btn-mc"])[2]'.</msg>
+<arg>locator=${TO_TAP_BTH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-10T15:34:18.160537" elapsed="0.203024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${REGISTR_PAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-10T15:34:18.363623" elapsed="0.077957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-10T15:34:28.443891" level="INFO">Slept 10 seconds.</msg>
+<arg>time_=10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-10T15:34:18.441580" elapsed="10.002311"/>
+</kw>
 <doc>2 шаг: Переход на страницу регистрации и ожидание</doc>
-<status status="NOT RUN" start="2024-06-10T15:33:22.991122" elapsed="0.000000"/>
+<status status="PASS" start="2024-06-10T15:34:18.142708" elapsed="10.301183"/>
 </kw>
 <kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-10T15:33:22.991122" elapsed="2.234849"/>
+<status status="PASS" start="2024-06-10T15:34:28.443891" elapsed="2.057912"/>
 </kw>
 <doc>Постусловие: Закрывает браузер, после выполнения теста</doc>
-<status status="PASS" start="2024-06-10T15:33:22.991122" elapsed="2.234849"/>
+<status status="PASS" start="2024-06-10T15:34:28.443891" elapsed="2.057912"/>
 </kw>
 <doc>Открытие страницы регистрации</doc>
-<timeout value="5 seconds"/>
-<status status="FAIL" start="2024-06-10T15:33:17.277819" elapsed="7.948152">Test timeout 5 seconds exceeded.</status>
+<timeout value="35 seconds"/>
+<status status="PASS" start="2024-06-10T15:34:10.409116" elapsed="20.092687"/>
 </test>
 <doc>в данном разделе будут хранится основные тест-кейсы проекта</doc>
-<status status="FAIL" start="2024-06-10T15:33:16.983696" elapsed="8.242275"/>
+<status status="PASS" start="2024-06-10T15:34:10.225570" elapsed="20.277596"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Open Website Etp">Open Website Etp</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Open Website Etp">Open Website Etp</stat>
 </suite>
 </statistics>
 <errors>
