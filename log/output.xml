@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-10T15:04:43.702425" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-10T15:33:16.966859" rpa="false" schemaversion="5">
 <suite id="s1" name="Open Website Etp" source="C:\Users\i.ilyin\Desktop\project_one\tests\etp_tests\open_website_etp.robot">
 <test id="s1-t1" name="Transition_open_page_etpgpb" line="9">
 <kw name="Preconditon: Open Browser and Maximaze" owner="web" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-06-10T15:04:43.936245" level="INFO">Opening browser 'chrome' to base url 'https://etp.gpb.ru/#auth/login'.</msg>
+<msg time="2024-06-10T15:33:17.279827" level="INFO">Opening browser 'chrome' to base url 'https://etp.gpb.ru/#auth/login'.</msg>
 <arg>url=${site_url}</arg>
 <arg>browser=${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-06-10T15:04:43.935230" elapsed="6.128522"/>
+<status status="PASS" start="2024-06-10T15:33:17.278828" elapsed="4.684565"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-06-10T15:04:50.063752" elapsed="0.028218"/>
+<status status="PASS" start="2024-06-10T15:33:21.963393" elapsed="0.043272"/>
 </kw>
 <arg>site_url=https://etp.gpb.ru/#auth/login</arg>
 <arg>browser=chrome</arg>
 <doc>Предусловие: Открытие браузера на весь экран</doc>
-<status status="PASS" start="2024-06-10T15:04:43.935230" elapsed="6.156740"/>
+<status status="PASS" start="2024-06-10T15:33:17.277819" elapsed="4.729663"/>
 </kw>
 <kw name="Transition registr etp" owner="etpgb">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<msg time="2024-06-10T15:05:15.689879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-06-10T15:05:15.689879" level="FAIL">Element '{T0_REGISTR_ETP}' did not appear in 25 seconds.</msg>
-<arg>locator={T0_REGISTR_ETP}</arg>
-<arg>timeout=25s</arg>
+<msg time="2024-06-10T15:33:22.990034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-10T15:33:22.990034" level="FAIL">Test timeout 5 seconds exceeded.</msg>
+<arg>locator=${T0_REGISTR_ETP}</arg>
+<arg>timeout=35s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="FAIL" start="2024-06-10T15:04:50.092969" elapsed="25.599903">Element '{T0_REGISTR_ETP}' did not appear in 25 seconds.</status>
+<status status="FAIL" start="2024-06-10T15:33:22.009522" elapsed="0.980512">Test timeout 5 seconds exceeded.</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>locator={T0_REGISTR_ETP}</arg>
+<arg>locator=${T0_REGISTR_ETP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-06-10T15:05:15.693906" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-10T15:33:22.990034" elapsed="0.000000"/>
 </kw>
 <doc>1 шаг:  Открытие страницы регистрации</doc>
-<status status="FAIL" start="2024-06-10T15:04:50.092969" elapsed="25.600937">Element '{T0_REGISTR_ETP}' did not appear in 25 seconds.</status>
+<status status="FAIL" start="2024-06-10T15:33:22.008580" elapsed="0.982542">Test timeout 5 seconds exceeded.</status>
 </kw>
 <kw name="To registr page" owner="etpgb">
 <doc>2 шаг: Переход на страницу регистрации и ожидание</doc>
-<status status="NOT RUN" start="2024-06-10T15:05:15.694490" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-06-10T15:33:22.991122" elapsed="0.000000"/>
 </kw>
 <kw name="Postcondition: Close Browser" owner="web" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-06-10T15:05:15.695595" elapsed="2.264721"/>
+<status status="PASS" start="2024-06-10T15:33:22.991122" elapsed="2.234849"/>
 </kw>
 <doc>Постусловие: Закрывает браузер, после выполнения теста</doc>
-<status status="PASS" start="2024-06-10T15:05:15.694490" elapsed="2.265826"/>
+<status status="PASS" start="2024-06-10T15:33:22.991122" elapsed="2.234849"/>
 </kw>
 <doc>Открытие страницы регистрации</doc>
-<status status="FAIL" start="2024-06-10T15:04:43.934250" elapsed="34.026066">Element '{T0_REGISTR_ETP}' did not appear in 25 seconds.</status>
+<timeout value="5 seconds"/>
+<status status="FAIL" start="2024-06-10T15:33:17.277819" elapsed="7.948152">Test timeout 5 seconds exceeded.</status>
 </test>
 <doc>в данном разделе будут хранится основные тест-кейсы проекта</doc>
-<status status="FAIL" start="2024-06-10T15:04:43.718983" elapsed="34.243485"/>
+<status status="FAIL" start="2024-06-10T15:33:16.983696" elapsed="8.242275"/>
 </suite>
 <statistics>
 <total>
